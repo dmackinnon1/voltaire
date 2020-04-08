@@ -1,0 +1,58 @@
+\usepackage{csquotes}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{1pt}
+\setlength{\headheight}{15pt}
+\setlength{\parskip}{0.5cm}
+%\usepackage{nonumonpart}
+
+\usepackage[pages=some]{background}
+{\backgroundsetup{
+opacity=0.2,
+angle=0,
+contents={
+ \includegraphics[scale=0.22]{voltaire.pdf}   
+}
+}%
+
+\usepackage{tocloft}
+\renewcommand\cftchapafterpnum{\vskip 10pt}
+\renewcommand\cftsecafterpnum{\vskip 4pt}
+
+\usepackage{graphicx}
+%title definition
+\newcommand*{\titleZD}{\begingroup
+\thispagestyle{empty}
+\vspace*{2\baselineskip}
+\centering
+{\Huge \bfseries The Philosophical Dictionary}
+\BgThispage
+
+%\includegraphics[width=0.7\textwidth]{voltaire.pdf}
+
+\vspace*{2\baselineskip}
+
+{\Huge Voltaire} 
+
+\vspace*{5\baselineskip}
+{\large {Project Gutenburg}}
+
+\vfill
+\null
+\endgroup}
+
+
+%vword definitions
+\newcommand{\vword}[1]{\vspace{1em}
+{\subsection*{#1}}
+\addcontentsline{toc}{subsection}{#1}
+\fancyhead[R]{#1}
+}
+
+\newcommand{\vchapter}[1]{
+\chapter*{#1}
+\addcontentsline{toc}{section}{#1}
+\fancyhead[L]{#1}
+}
+    
+\newcommand{\vref}[1]{\textit{#1}}
